@@ -1,0 +1,286 @@
+<!DOCTYPE>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+        <script type="text/javascript" src="form-handle.js"></script>
+        
+        
+        <style>
+            nav {
+                z-index:1;
+                position:fixed;
+                top:0;
+                left:0;
+                padding:0;
+                margin:0;
+                width:100%;
+                height:7vh;
+                background-color:white;
+            }
+            nav ul {
+                list-style:none;
+                padding:0;
+                margin:0;
+            }
+            nav ul li {
+                margin:0;
+                padding:0;
+                height: 7vh;
+                float: left;
+            }
+            nav ul li a {
+                text-decoration:none;
+                color:#153c4c;
+                font-size:2em;
+                line-height: 7vh;
+                text-align: center;
+                display:block;
+                height:7vh;
+                width:33.3333333333vw;
+                margin:0;
+                padding:0;
+            }
+            nav ul li a:hover {
+                background-color:#153c4c;
+                color:white;
+            }
+            .title{
+                margin: 0 auto;
+                width:50vw;
+                
+            }
+            .title form {
+                text-align: center;
+            }
+            .title input {
+                box-sizing: border-box;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                border:1px solid #BEBEBE;
+                padding: 7px;
+                margin:0 auto;
+                -webkit-transition: all 0.30s ease-in-out;
+                -moz-transition: all 0.30s ease-in-out;
+                -ms-transition: all 0.30s ease-in-out;
+                -o-transition: all 0.30s ease-in-out;
+                outline: none;  
+                height:5vh;
+                width:40vw;
+                line-height:5vh;
+                display:block;
+                font-size:2.1em;
+                font-family: Roboto;
+                color:#153c4c;
+            }
+            .logo{
+                
+                display:block;
+                height:50vh;
+                margin: 10vh auto 5vh auto;
+            }
+            
+            body {
+                margin:0;
+                padding:0;
+                background: no-repeat;
+                background: #153c4c; /* Old browsers */
+                background: -webkit-gradient(linear, 0 0, 0 100%, from(#153c4c), to(#7db9e8));
+                background: -webkit-linear-gradient(#153c4c 0%, #7db9e8 100%);
+                background: -moz-linear-gradient(#153c4c 0%, #7db9e8 100%);
+                background: -o-linear-gradient(#153c4c 0%, #7db9e8 100%);
+                background: linear-gradient(#153c4c 0%, #7db9e8 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+                filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#153c4c', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+            }
+            p{
+                font-family:Roboto;
+                
+            }
+            
+            button {
+                margin-top:15px;
+                background-color: #87ceeb;
+                border: none;
+                font-family: "nixie-one", arial;
+                width: 15vw;
+                height: 5vw;
+                text-align: center;
+                font-size: 2vw;
+                color: white;
+                text-decoration: "8b8989";
+                
+                
+            }
+            button:hover{
+                background-color: #4682b4;
+                color:white;
+                
+            }
+            #wrapper {
+                width:100vw;
+                background-color:white;
+                margin:0;
+                padding:0;
+            }
+            .footer{
+                padding-bottom:15px;
+            }
+            
+            #information {
+                display:block;
+                margin: 0 auto;
+                padding:10px;
+                height:50vh;
+                width:70vw;
+                top:10vh;
+                
+            }
+            #information h2 {
+                color: #153C4C;
+                font-family: Roboto;
+            }
+ .container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 20vw;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 20vw;
+  height:0;
+  transition: .5s ease;
+}
+
+.container:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.caption {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.words {
+    height:36vw;
+}
+           
+            
+                
+        </style>
+        <title>Guise - Rewrite History</title>
+    </head>
+    
+    <body>
+        
+        <div class="navbar navbar-default navbar-fixed-top affix-top">
+        <nav>
+            <ul>
+                <li><a href="https://guise-camo-shan3011.c9users.io/test.html">Home</a></li>
+                <li><a href="#howdoesitwork">How Does it Work?</a></li>
+                <li><a href="#whoarewe">Who Are We?</a></li>
+            </ul>
+        </nav>
+        </div>
+        
+            <div class = "title">
+                <img class = "logo" src="logo.svg" alt="guizeLogo">
+                <form method="post" onsubmit="return handleData();">
+                    <input type="text" placeholder="Ex. Cheese, Cats, Pineapple..." name="text" id="wordfield"  />
+                    <button type="button" onclick="handleData()"> Rewrite History</button> 
+                </form>
+            </div>
+            
+            
+            <div id="wrapper">
+            
+            <div id="information">
+              
+                <h2 id="howdoesitwork">How Does it Work?</h2>
+                <p>
+                    Guize is an app dedicated to keeping your data to you. The makes your search history entirely<br>
+                useless to any company plans to sell your data and impact your decisions. We hope that our app will <br>
+                force big brother out of our personal business and giving rise to a less capitalistic internet. 
+                </p>
+                <h2 id="whoarewe">Who Are We?</h2>
+            
+                    <table>
+  <tr>
+    <th></th>
+    <th><div class="container">
+  <img src="https://lh3.googleusercontent.com/-m1Qx_clowow/WSEUg422x3I/AAAAAAAAATY/uUxR9sEJR2QYo09SXFQwQP10CorivNC4QCJoC/w530-h707-p-rw/IMG_1224%2B%25281%2529.JPG" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="caption">Ethan</div>
+  </div>
+</div></th>
+    <th> <div class="container">
+                       <img src="https://lh3.googleusercontent.com/-u2IYdQNlPlw/WSEUwaK1Z2I/AAAAAAAAAT8/SGqDTbeK8MsuoehpS3QrXAVxfmEAqmuDACJoC/w530-h707-p-rw/IMG_1220.JPG" alt="Avatar" class="image">
+                   <div class="overlay">
+                    <div class="caption">Josh</div>
+                          </div>
+                             </div>
+                             
+                             </th>
+                             <th>
+                             <div class="container" "words">
+                             <p class="image" style="background-color:gray">Tetra is a team of highschool students, driven by our love and passion for technology, and eagerness to learn!</p>
+                             <div class="overlay">
+                             <div class="caption">If you have any other questions, email us at pennyebrant@gmail.com</div>
+  </div>
+</div></th>
+                             </tr>
+                             <td>
+    <th><div class="container">
+  <img src="https://lh3.googleusercontent.com/-lNqfjWD7X6o/WSEUjjgZUYI/AAAAAAAAATo/s-pCSXKYLQ4zQzLWucU5Vx2D09UJ-RRlgCJoC/w530-h707-p-rw/IMG_1223%2B%25281%2529.JPG" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="caption">Jonathan</div>
+  </div>
+</div></th>
+            <th><div class="container">
+  <img src="https://lh3.googleusercontent.com/-jblSYqbIxUg/WSEnq5NlNsI/AAAAAAAAAU8/dQIfFxXchuMbuVd5C4uJbm4uzpwUJqSQQCL0B/w530-d-h707-p-rw/alex.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="caption">Alex</div>
+  </div>
+</div></th>
+<th><div class="container">
+  <img src="https://lh3.googleusercontent.com/-wzQVdx8yB0U/WSEUZPebYdI/AAAAAAAAATE/zNwDrKYW4hYUr02NxfF8lff-2YeZIY3CwCL0B/w530-d-h707-p-rw/IMG_1231%2B%25281%2529.JPG" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="caption">Penny</div>
+  </div>
+</div></th>
+
+
+
+</td></table>
+                    
+        <div class = "footer">
+            
+        </div>
+                   
+                       
+                    
+    </body>
+    
+</html>
+</DOCTYPE>

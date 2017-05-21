@@ -1,0 +1,30 @@
+{
+    "manifest_version": 2,
+    "name": "Guise",
+    "description": "This extision prevents your search cronies from taking yo things fam",
+    "version": "6.6.6",
+    "background": {
+        "scripts": [
+            "/scripts/background.js"
+        ],
+        "persistent": true
+    },
+    "permissions": [
+        "https://*/*",
+        "http://*/*",
+        "tabs",
+        "history"
+    ],
+    "icons": {
+        "16": "/images/icon16.png",
+        "32": "/images/icon32.png",
+        "48": "/images/icon48.png",
+        "128": "/images/icon128.png",
+        "256": "/images/icon256.png"
+    },
+
+    "browser_action": {
+		"default_icon": "/images/icon48.png",
+		"popup": "test.html"
+	}
+}
